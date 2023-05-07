@@ -21,9 +21,59 @@ int main()
         class basic_string;
      */
 
-    cout << "Your name? : " << endl;
+//    cout << "Your name? : ";
+//    string name;
+//    cin >> name;
+//
+//    cout << "Your age? : ";
+//    string age;
+//    cin >> age;
+//
+//    cout << name << " " << age << endl;
+
+    /**
+     * cin func blankspace is end
+     */
+     /**
+      * string >> use getline(std::cin, (string variable));
+      */
+//      string name;
+//      string age;
+//     std::getline(std::cin, name); // read oneline (include blankspace)
+//     std::getline(std::cin, age);
+//
+//     cout << name << " " << age << endl;
+
+     /**
+      * read string & integer same time
+      */
+     string name;
+     int age;
+//     cout << "Your name? : ";
+//     std::getline(std::cin, name);
+//     cout << "Your age? : ";
+//     cin >> age;
+//
+//    cout << name << " " << age << endl;
+
+    /**
+     * Reverse name & age inputting
+     */
+//     cout << "Your age? : ";
+//     cin >> age;
+//     cout << "Your name? : ";
+//     std::getline(cin, name);
 
 
+     // clear buffered.
+
+    cout << "Your age? : ";
+    cin >> age;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // this mean buffered ignore 32767 characters before faced \n
+    // streamsize is buffered size
+    cout << "Your name? : ";
+    std::getline(cin, name);
+    cout << name << " " << age << endl;
 
     return 0;
 }
